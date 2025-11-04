@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Registro • Biblioteca{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+        <div class="card glassy-surface border-0 rounded-4 soft-shadow-xxl lift-on-hover">
+            <div class="card-body p-4 p-lg-5">
+                <h2 class="h4 mb-4 fw-bold"><i class="bi bi-person-plus"></i> Crear cuenta</h2>
+
+                <form method="post" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" name="nombre" class="form-control form-control-lg input-elevated" required>
+                            <div class="invalid-feedback">Ingresa tu nombre.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Correo</label>
+                            <input type="email" name="correo" class="form-control form-control-lg input-elevated" required>
+                            <div class="invalid-feedback">Ingresa un correo válido.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Rol</label>
+                            <select name="tipo" class="form-select form-select-lg input-elevated" required>
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Contraseña</label>
+                            <div class="input-group input-elevated">
+                                <input type="password" name="password" class="form-control form-control-lg" minlength="6" required id="regpass">
+                                <button class="btn btn-outline-secondary" type="button" onclick="togglePass('regpass', this)"><i class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-warning btn-lg mt-4 w-100 btn-elevated">Crear cuenta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

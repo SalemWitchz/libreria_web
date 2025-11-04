@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Panel Admin{% endblock %}
+{% block content %}
+
+<h2 class="mb-4 fw-bold"><i class="bi bi-speedometer2"></i> Panel de Administración</h2>
+
+<div class="row g-4 mb-4">
+    <div class="col-6 col-lg-3">
+        <div class="metric-card gradient-green text-white rounded-4 p-4 soft-shadow-xxl">
+            <div class="small opacity-75">Libros</div>
+            <div class="display-6 fw-bold">—</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="metric-card gradient-blue text-white rounded-4 p-4 soft-shadow-xxl">
+            <div class="small opacity-75">Usuarios</div>
+            <div class="display-6 fw-bold">—</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="metric-card gradient-orange text-white rounded-4 p-4 soft-shadow-xxl">
+            <div class="small opacity-75">Préstamos activos</div>
+            <div class="display-6 fw-bold">—</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="metric-card gradient-red text-white rounded-4 p-4 soft-shadow-xxl">
+            <div class="small opacity-75">Vencidos</div>
+            <div class="display-6 fw-bold">—</div>
+        </div>
+    </div>
+</div>
+
+<div class="card rounded-4 soft-shadow-xl border-0 lift-on-hover">
+    <div class="card-body p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-semibold mb-0"><i class="bi bi-journal-plus"></i> Gestión rápida</h5>
+            <div class="d-flex gap-2">
+                <a href="{{ url_for('main.register') }}" class="btn btn-sm btn-outline-secondary btn-elevated"><i class="bi bi-person-plus"></i> Nuevo usuario</a>
+                <a href="#" class="btn btn-sm btn-primary btn-elevated"><i class="bi bi-book"></i> Nuevo libro</a>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle table-hover table-elevated">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Registro</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo estático; luego lo puedes poblar desde DB -->
+                    <tr>
+                        <td>1</td>
+                        <td>Admin Demo</td>
+                        <td>admin@demo.com</td>
+                        <td><span class="badge rounded-pill text-bg-dark">Administrador</span></td>
+                        <td>2025-11-04</td>
+                        <td class="text-end"><button class="btn btn-sm btn-light btn-elevated"><i class="bi bi-pencil"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

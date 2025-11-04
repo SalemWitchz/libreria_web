@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>97e86d82-c7b9-4d22-b78b-3999af11a71a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>libreria_web</Name>
+    <RootNamespace>libreria_web</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\db.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\routes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\test_route.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="libreria_web\__init__.py" />
+    <Compile Include="libreria_web\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libreria_web\" />
+    <Folder Include="libreria_web\static\" />
+    <Folder Include="libreria_web\static\content\" />
+    <Folder Include="libreria_web\static\fonts\" />
+    <Folder Include="libreria_web\static\css\" />
+    <Folder Include="libreria_web\static\img\" />
+    <Folder Include="libreria_web\static\scripts\" />
+    <Folder Include="libreria_web\templates\" />
+    <Folder Include="app\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libreria_web\static\css\style.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="libreria_web\static\scripts\app.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="libreria_web\templates\admin.html" />
+    <Content Include="libreria_web\templates\base.html" />
+    <Content Include="libreria_web\templates\login.html" />
+    <Content Include="libreria_web\templates\register.html" />
+    <Content Include="libreria_web\templates\usuario.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="libreria_web\static\content\bootstrap.css" />
+    <Content Include="libreria_web\static\content\bootstrap.min.css" />
+    <Content Include="libreria_web\static\content\site.css" />
+    <Content Include="libreria_web\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="libreria_web\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="libreria_web\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="libreria_web\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="libreria_web\static\scripts\bootstrap.js" />
+    <Content Include="libreria_web\static\scripts\bootstrap.min.js" />
+    <Content Include="libreria_web\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="libreria_web\static\scripts\jquery-1.10.2.js" />
+    <Content Include="libreria_web\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="libreria_web\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="libreria_web\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="libreria_web\static\scripts\jquery.validate.js" />
+    <Content Include="libreria_web\static\scripts\jquery.validate.min.js" />
+    <Content Include="libreria_web\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="libreria_web\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="libreria_web\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="libreria_web\static\scripts\respond.js" />
+    <Content Include="libreria_web\static\scripts\respond.min.js" />
+    <Content Include="libreria_web\static\scripts\_references.js" />
+    <Content Include="libreria_web\templates\about.html" />
+    <Content Include="libreria_web\templates\contact.html" />
+    <Content Include="libreria_web\templates\index.html" />
+    <Content Include="libreria_web\templates\layout.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

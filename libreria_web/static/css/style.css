@@ -1,0 +1,138 @@
+:root {
+    --bg-dark: #0f1320;
+    --bg-card: rgba(255,255,255,0.06);
+    --border-soft: rgba(255,255,255,0.12);
+    --primary: #2E86AB;
+    --primary-2: #1F6C8F;
+    --gradient-primary: linear-gradient(135deg, #2E86AB, #5CB3FF);
+}
+
+/* Fondo general con sutil textura */
+.bg-body {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(46,134,171,0.10), transparent 50%), radial-gradient(1000px 500px at 110% 10%, rgba(255,193,7,0.08), transparent 50%), #0b0e17;
+    min-height: 100vh;
+    color: #eaeef5;
+}
+
+/* Navbar con relieve y separación visual */
+.bg-gradient-primary {
+    background: var(--gradient-primary);
+}
+
+.bar-raised {
+    position: relative;
+    z-index: 10;
+}
+
+.soft-shadow-xxl {
+    box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 6px 18px rgba(0,0,0,.25);
+}
+
+.soft-shadow-xl {
+    box-shadow: 0 14px 30px rgba(0,0,0,.35), 0 4px 12px rgba(0,0,0,.25);
+}
+
+.soft-shadow-inset {
+    box-shadow: inset 0 8px 20px rgba(0,0,0,.25);
+}
+
+.navbar .nav-link.nav-pill {
+    border-radius: 999px;
+    padding: .45rem .85rem;
+    transition: all .2s ease;
+}
+
+    .navbar .nav-link.nav-pill:hover {
+        background: rgba(255,255,255,.16);
+        transform: translateY(-1px);
+    }
+
+/* Botones “levantados” */
+.btn-elevated {
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+    .btn-elevated:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+
+.input-elevated, .table-elevated, .alert-elevated {
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    border: 1px solid var(--border-soft);
+}
+
+/* Superficies con efecto vidrio (glassy) */
+.glassy-surface {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-soft);
+}
+
+/* Hero y tarjetas */
+.hero {
+    border: 1px solid var(--border-soft);
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-soft);
+}
+
+/* Elevación al pasar el mouse */
+.lift-on-hover {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+    .lift-on-hover:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 38px rgba(0,0,0,.45);
+    }
+
+/* Métricas con gradiente */
+.gradient-green {
+    background: linear-gradient(135deg, #16a085, #2ecc71);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #2E86AB, #5CB3FF);
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+.gradient-red {
+    background: linear-gradient(135deg, #e74c3c, #ff7675);
+}
+
+/* Tablas */
+.table-elevated {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.table thead th {
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.table tbody tr {
+    transition: background .15s ease;
+}
+
+    .table tbody tr:hover {
+        background: rgba(255,255,255,.04);
+    }
+
+/* Links */
+a.link-underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Flash stack */
+.flash-stack > .alert {
+    border: 1px solid var(--border-soft);
+}

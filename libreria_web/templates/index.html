@@ -1,0 +1,38 @@
+﻿{% extends "base.html" %}
+{% block title %}Inicio • Biblioteca{% endblock %}
+{% block content %}
+
+<section class="hero glassy-surface soft-shadow-xxl rounded-4 p-5 mb-4">
+    <div class="row align-items-center g-4">
+        <div class="col-md-7">
+            <h1 class="display-5 fw-bold mb-3">Bienvenido a la Biblioteca</h1>
+            <p class="lead mb-4">Consulta el catálogo, gestiona préstamos y administra tu acervo. Interfaz moderna, rápida y con estilo.</p>
+            <div class="d-flex gap-2 flex-wrap">
+                <a href="{{ url_for('main.login') }}" class="btn btn-lg btn-primary btn-elevated"><i class="bi bi-box-arrow-in-right"></i> Ingresar</a>
+                <a href="{{ url_for('main.register') }}" class="btn btn-lg btn-outline-light btn-elevated"><i class="bi bi-person-plus"></i> Registrarse</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="stat-card rounded-4 soft-shadow-xl p-4 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-journal-richtext display-6 text-primary"></i>
+                    <div>
+                        <div class="fw-semibold">Catálogo</div>
+                        <div class="small text-muted">Explora libros por género, autor y más.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card rounded-4 soft-shadow-xl p-4">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-people-fill display-6 text-warning"></i>
+                    <div>
+                        <div class="fw-semibold">Usuarios</div>
+                        <div class="small text-muted">Accesos por rol: Estudiante y Administrador.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
